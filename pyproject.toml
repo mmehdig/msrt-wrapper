@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "msrt-wrapper"
+version = "0.1.0"
+description = ""
+authors = ["Mehdi Ghanimifard"]
+packages = [{ include = "dummy"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"ruamel.yaml" = "*"
+recognizers-text = {path = "Recognizers-Text/Python/libraries/recognizers-text/dist/recognizers_text-1.0.0a0-py3-none-any.whl"}
+regex = "^2023.10.3"
+recognizers-text-number = {path = "Recognizers-Text/Python/libraries/recognizers-number/dist/recognizers_text_number-1.0.0a0-py3-none-any.whl"}
+recognizers-text-number-with-unit = {path = "Recognizers-Text/Python/libraries/recognizers-number-with-unit/dist/recognizers_text_number_with_unit-1.0.0a0-py3-none-any.whl"}
+recognizers-text-date-time = {path = "Recognizers-Text/Python/libraries/recognizers-date-time/dist/recognizers_text_date_time-1.0.0a0-py3-none-any.whl"}
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.build]
+generate-setup-file = false 
+script = "build.py"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "pip", "build", "ruamel.yaml"]
+build-backend = "poetry.core.masonry.api"
